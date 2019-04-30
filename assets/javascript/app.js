@@ -74,6 +74,10 @@ $(document).ready(function () {
         var ETAI = moment().diff(moment(trainStartPretty, "LT"), "minutes");
         var ETA = parseInt(ETAI)*-1;
 
+        if (ETA <= 0){
+            ETA = ETA + (24*60);
+        }
+
         //   // Calculate the total billed rate
         //   var empBilled = empMonths * empRate;
         //   console.log(empBilled);
